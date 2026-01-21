@@ -8,6 +8,10 @@
 <p role="status">Current count: @currentCount</p>
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+@if(currentCount > 10){
+    <p>You've clicked more than 10 times!</p>
+}
+
 
 @code {
     private int currentCount = 0;

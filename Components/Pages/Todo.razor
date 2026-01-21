@@ -1,0 +1,25 @@
+﻿@page "/todo"
+@rendermode InteractiveServer
+<h3>Todo</h3>
+<input @bind="newToDoTitle" />
+<button @onclick="AddTodo">Add new Todo item</button>
+
+<ul>
+    @foreach (TodoItem item in todoItems)
+    {
+        <li>@item.Title</li>
+    }
+</ul>
+
+@code {
+    private string newToDoTitle = string.Empty;
+    private List<TodoItem> todoItems = new List<TodoItem>();
+
+    void AddTodo(){
+        Console.WriteLine("Adding new todo item: " + newToDoTitle);
+        if(newToDoTitle!= null && !newToDoTitle.Equals(string.Empty)){
+            todoItems.Add(new TodoItem { Title = newToDoTitle, IsCompleted = false });
+            newToDoTitle = string.Empty;
+        }
+    }
+}

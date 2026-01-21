@@ -1,13 +1,17 @@
 ﻿@page "/todo"
 @rendermode InteractiveServer
-<h3>Todo</h3>
+<h3>Todo (@todoItems.Count(todoItem => !todoItem.IsCompleted))</h3>
 <input @bind="newToDoTitle" />
 <button @onclick="AddTodo">Add new Todo item</button>
 
 <ul>
     @foreach (TodoItem item in todoItems)
     {
-        <li>@item.Title</li>
+        <li>
+            <input @bind=item.Title />
+            <input type="checkbox" @bind="item.IsCompleted" />
+        </li>
+        
     }
 </ul>
 

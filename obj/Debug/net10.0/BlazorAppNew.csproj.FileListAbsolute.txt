@@ -83,3 +83,4 @@
 /home/chris/BlazorAppNew/obj/Debug/net10.0/BlazorAppNew.pdb
 /home/chris/BlazorAppNew/obj/Debug/net10.0/BlazorAppNew.genruntimeconfig.cache
 /home/chris/BlazorAppNew/obj/Debug/net10.0/ref/BlazorAppNew.dll
+/home/chris/BlazorAppNew/obj/Debug/net10.0/BlazorAppNew.sourcelink.json
